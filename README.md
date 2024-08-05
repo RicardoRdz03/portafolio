@@ -1,8 +1,5 @@
 # Portafolio web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio web personal que muestra diversas secciones como habilidades, los proyectos realizados etc.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![proyecto1](https://github.com/user-attachments/assets/a87c1459-bd5c-4bfa-9707-acee8778e6c6)
