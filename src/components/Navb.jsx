@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
+import { useTraduccion } from "../context/TraduccionesContext";
 
 function Navb() {
+  const { t, setLenguaje } = useTraduccion();
   const [isOpen, setIsOpen] = useState(false);
 
   const abrirMenu = () => {
@@ -25,29 +27,40 @@ function Navb() {
             style={{ marginRight: "16px", color: "hsla(195, 93%, 48%, 1)" }}
             href=""
           >
-            Inicio
+            {t.inicio}
           </a>
           <a style={{ marginRight: "16px" }} href="">
-            Habilidades
+            {t.sobremi}
           </a>
           <a style={{ marginRight: "16px" }} href="#proyectos">
-            Proyectos
+            {t.proyectos}
           </a>
-          <a href="#certificados">Certificados</a>
+          <a href="#certificados">{t.certificados}</a>
+          <button onClick={() => setLenguaje("es")}>Español</button>
+          <button onClick={() => setLenguaje("en")}>Inglés</button>
+        </div>
+        <div className={`menu ${isOpen ? "active" : ""}`}>
+          <div className="div-icon">
+            <i
+              onClick={abrirMenu}
+              style={{ fontSize: "x-large" }}
+              className="bi bi-x"
+            ></i>
+          </div>
+          <div className="div-links">
+            <a style={{ marginBottom: "30px" }} href="">
+              Inicio
+            </a>
+            <a style={{ marginBottom: "30px" }} href="">
+              Habilidades
+            </a>
+            <a style={{ marginBottom: "30px" }} href="#proyectos">
+              Proyectos
+            </a>
+            <a href="#certificados">Certificados</a>
+          </div>
         </div>
       </nav>
-      <div className={`menu ${isOpen ? "active" : ""}`}>
-        <a style={{ marginBottom: "30px" }} href="">
-          Inicio
-        </a>
-        <a style={{ marginBottom: "30px" }} href="">
-          Habilidades
-        </a>
-        <a style={{ marginBottom: "30px" }} href="#proyectos">
-          Proyectos
-        </a>
-        <a href="#certificados">Certificados</a>
-      </div>
     </>
   );
 }

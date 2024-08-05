@@ -23,7 +23,8 @@ body {
 }
 
 .seccion-portada {
-  height: 89vh;
+  height: 100vh;
+  width: 100%;
 }
 
 .grid-portada {
@@ -60,7 +61,7 @@ h3 {
 }
 
 .columna1-portada img {
-  width: 300px;
+  width: 265px;
   border-radius: 7px;
   animation: upDown 2.2s linear infinite;
 }
@@ -113,9 +114,13 @@ h3 {
 
 nav {
   display: flex;
+  position: fixed;
+  width: 100%;
   align-items: center;
   justify-content: space-around;
   height: 9vh;
+  z-index: 1000;
+  background-color: rgb(6, 18, 27);
 }
 
 nav a {
@@ -129,14 +134,32 @@ nav h2 {
 }
 
 .menu {
-  display: flex;
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 50vh;
   flex-direction: column;
   background-color: rgb(18, 55, 82);
-  display: none;
   transition: all 0.3s;
+}
+
+.div-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10vh;
+}
+.div-icon {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  padding-left: 2rem;
+  padding-top: 1rem;
 }
 
 .menu a {
@@ -303,69 +326,67 @@ footer {
 footer p {
   margin: auto;
 }
-
-.copiar-correo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border-radius: 9px;
-}
 .seccion-contacto {
   width: 70%;
   margin: 0 auto;
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
-.copy-email-container {
+.email-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.email-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-.email-text {
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-family: Arial, sans-serif;
+#email-text {
+  font-weight: bold;
+  color: #007bff;
+  margin-right: 10px;
 }
 
 .copy-button {
-  padding: 0.4rem 1rem;
-  color: hsla(206, 64%, 10%, 1);
-  background-color: hsla(195, 93%, 48%, 1);
-  border: 2px solid hsla(195, 93%, 48%, 1);
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: 700;
-  font-size: medium;
-  border-radius: 6px;
-  margin-left: 1rem;
-  transition: all 0.3s;
 }
 
 .copy-button:hover {
-  background-color: rgb(114, 220, 255);
-  border-color: rgb(114, 220, 255);
-  box-shadow: 0px 0px 10px 1px rgb(114, 220, 255);
+  background-color: #0056b3;
 }
 
-.copy-button.copied {
-  padding: 0.4rem 1rem;
-  color: hsla(206, 64%, 10%, 1);
-  background-color: hsla(195, 93%, 48%, 1);
-  border: 2px solid hsla(195, 93%, 48%, 1);
-  cursor: pointer;
-  font-weight: 700;
-  font-size: medium;
-  border-radius: 6px;
-  margin-left: 1rem;
-  transition: all 0.3s;
+input {
+  background-color: #c9c9c9;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9px;
+  color: black;
+  width: 321px;
+}
+textarea {
+  background-color: #c9c9c9;
+  width: 321px;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9px;
+  color: black;
 }
 
-.copy-button.copied:hover {
-  background-color: rgb(114, 220, 255);
-  border-color: rgb(114, 220, 255);
-  box-shadow: 0px 0px 10px 1px rgb(114, 220, 255);
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @keyframes upDown {
@@ -462,6 +483,12 @@ footer p {
   }
 }
 
+@media (max-width: 770px) {
+  .columna1-portada img {
+    width: 200px;
+  }
+}
+
 @media (max-width: 700px) {
   .grid-portada {
     grid-template-columns: 1fr;
@@ -497,11 +524,9 @@ footer p {
     font-size: 2rem;
   }
   .columna1-portada {
+    align-items: end;
     width: 77%;
     margin: 0 auto;
-  }
-  .columna1-portada img {
-    width: 250px;
   }
   .seccion-proyectos {
     width: 90%;
@@ -520,6 +545,12 @@ footer p {
   }
   .columna1-certificado img {
     width: 300px;
+  }
+  input {
+    width: 270px;
+  }
+  textarea {
+    width: 270px;
   }
 }
 
@@ -540,7 +571,8 @@ footer p {
 
 @media (max-width: 325px) {
   .columna1-portada img {
-    width: 150px;
+    width: 120px;
+    margin-top: 1rem;
   }
   .columna2-portada h1 {
     font-size: 0.9rem;

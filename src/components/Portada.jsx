@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTraduccion } from "../context/TraduccionesContext";
 
 function Portada() {
+  const { t, setLenguaje } = useTraduccion();
   return (
     <section className="seccion-portada">
       <div className="grid-portada">
@@ -9,7 +11,7 @@ function Portada() {
           <img src="/sobremi.avif" alt="" />
         </div>
         <div className="columna2-portada">
-          <h2>Hola, soy Ricardo</h2>
+          <h2>{t.hola}</h2>
           <h1 className="typeado">FullStack Developer</h1>
           <div className="div-btn">
             <button
@@ -17,9 +19,9 @@ function Portada() {
               className="btn-solid"
               style={{ marginRight: "17px" }}
             >
-              Descargar CV
+              {t.cv}
             </button>
-            <button className="btn-outlined">Contactame</button>
+            <button className="btn-outlined">{t.contacto}</button>
           </div>
           <div className="div-iconos">
             <Link
@@ -29,7 +31,7 @@ function Portada() {
             >
               <i
                 id="github"
-                style={{ marginRight: "20px" }}
+                style={{ marginRight: "30px" }}
                 className="bi bi-github"
               ></i>
             </Link>
