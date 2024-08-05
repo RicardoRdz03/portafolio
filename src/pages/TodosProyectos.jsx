@@ -3,8 +3,10 @@ import { listaProyectos } from "../functions/listaProyectos";
 import AOS from "aos";
 import Navb2 from "../components/Navb2";
 import Footer from "../components/Footer";
+import { useTraduccion } from "../context/TraduccionesContext";
 
 function TodosProyectos() {
+  const { t } = useTraduccion();
   useEffect(() => {
     AOS.init({
       duration: 700,
@@ -17,7 +19,7 @@ function TodosProyectos() {
       <Navb2 />
       <section className="seccion-proyectos">
         <h1 className="centrar">
-          <i className="bi bi-code-slash"></i> Proyectos
+          <i className="bi bi-code-slash"></i> {t.tproyectos}
         </h1>
         {projects.map((proyecto) => {
           return (

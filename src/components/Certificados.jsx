@@ -1,11 +1,13 @@
 import React from "react";
+import { useTraduccion } from "../context/TraduccionesContext";
 
 function Certificados() {
+  const { t } = useTraduccion();
   return (
     <>
       <section id="certificados" className="seccion-certificados">
         <h1 className="centrar">
-          <i className="bi bi-award"></i> Certificados
+          <i className="bi bi-award"></i> {t.tcertificado}
         </h1>
         <div className="grid-certificado">
           <div className="columna1-certificado">
@@ -15,13 +17,13 @@ function Certificados() {
             <h2 style={{ textAlign: "center" }}>
               Responsive Web Design - freeCodeCamp
             </h2>
-            <p>{"(Marzo - Abril 2024)"}</p>
+            <p>{t.fecha}</p>
             <a
               target="_blank"
               href="https://www.freecodecamp.org/certification/RicardoAntonioArteagaRodriguez/responsive-web-design"
             >
               <button className="btn-solid">
-                Ver credencial{" "}
+                {t.btncertificado}{" "}
                 <i
                   style={{ marginLeft: "3px" }}
                   className="bi bi-box-arrow-up-right"

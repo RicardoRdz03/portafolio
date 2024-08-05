@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navb from "../components/Navb";
 import Portada from "../components/Portada";
 import SobreMi from "../components/SobreMi";

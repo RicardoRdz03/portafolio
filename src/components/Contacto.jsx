@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTraduccion } from "../context/TraduccionesContext";
 
 function Contacto() {
+  const { t } = useTraduccion();
   const email = "ricardo.arteaga.rdz@gmail.com";
   const [copied, setCopied] = useState(false);
 
@@ -14,28 +16,28 @@ function Contacto() {
     <>
       <section className="seccion-contacto">
         <h1 className="centrar">
-          <i className="bi bi-at"></i> Contacto
+          <i className="bi bi-at"></i> {t.tcontacto}
         </h1>
         <div className="email-section">
           <form
             action="https://formsubmit.co/ricardo.arteaga.rdz@gmail.com"
             method="POST"
           >
-            <input name="Nombre" placeholder="Nombre" type="text" />
-            <input name="Correo" placeholder="Correo" type="email" />
-            <textarea name="Mensaje" placeholder="Mensaje" id=""></textarea>
+            <input name="Nombre" placeholder={t.nombre} type="text" />
+            <input name="Correo" placeholder={t.correo} type="email" />
+            <textarea name="Mensaje" placeholder={t.mensaje} id=""></textarea>
             <button type="submit" className="btn-outlined">
-              Enviar <i className="bi bi-send"></i>
+              {t.btnenviar} <i className="bi bi-send"></i>
             </button>
           </form>
-          <p>O puedes contactarme directamente a mi correo:</p>
+          <p>{t.contactar}</p>
           <div className="email-container">
             <p id="email-text">{email}</p>
             <button
               onClick={handleCopy}
               className={`copy-button ${copied ? "copied" : ""}`}
             >
-              {copied ? "¡Copiado!" : "Copiar correo"}
+              {copied ? `${t.copiar2}` : `${t.copiar}`}
             </button>
           </div>
           <Link

@@ -1,21 +1,22 @@
+import { useTraduccion } from "../context/TraduccionesContext";
+
 export function listaProyectos() {
+  const { t } = useTraduccion();
   const projects = [
     {
       id: 1,
-      titulo: "PelisenHD - FullStack",
+      titulo: `${t.p1t}`,
       img: "/1.png",
-      descripcion:
-        "Página web de peliculas y series creada en React con creación y consumo de propia API",
+      descripcion: `${t.p1d}`,
       github: "https://github.com/RicardoRdz03",
       pagina: "https://peli-series-rick.netlify.app/",
       tec: ["React", "MySQL", "Express.js"],
     },
     {
       id: 2,
-      titulo: "Login - FullStack",
+      titulo: `${t.p2t}`,
       img: "/2.png",
-      descripcion:
-        "Login responsivo funcional con página de inicio de sesión, página de registro y sesión de usuarios",
+      descripcion: `${t.p2d}`,
       github: "https://github.com/RicardoRdz03/Login-responsivo---Full-Stack",
       pagina: "https://login-responsive-rick.netlify.app/",
       tec: ["React", "MySQL", "Express.js", "TailwindCSS"],

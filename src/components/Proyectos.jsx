@@ -1,14 +1,17 @@
 import React from "react";
 import { listaProyectos } from "../functions/listaProyectos";
+import { Link } from "react-router-dom";
+import { useTraduccion } from "../context/TraduccionesContext";
 
 function Proyectos() {
+  const { t } = useTraduccion();
   const projects = listaProyectos();
 
   return (
     <>
       <section id="proyectos" className="seccion-proyectos">
         <h1 className="centrar">
-          <i className="bi bi-code-slash"></i> Proyectos
+          <i className="bi bi-code-slash"></i> {t.tproyectos}
         </h1>
         {projects.slice(0, 2).map((proyecto) => {
           return (
@@ -74,7 +77,7 @@ function Proyectos() {
               style={{ width: "250px", margin: "auto" }}
               className="btn-solid"
             >
-              Ver más proyectos...
+              {t.btnmas}
             </button>
           </a>
         </div>

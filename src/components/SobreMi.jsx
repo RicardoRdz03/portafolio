@@ -13,7 +13,7 @@ function SobreMi() {
   }, []);
 
   return (
-    <section className="seccion-sobremi">
+    <section id="sobre-mi" className="seccion-sobremi">
       <h1 className="centrar">
         <i className="bi bi-person-vcard"></i> {t.tsobremi}
       </h1>
