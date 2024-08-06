@@ -74,9 +74,9 @@ function Navb2() {
             ></i>
           </div>
           <div className="div-links">
-            <a style={{ marginBottom: "30px" }} href="">
+            <Link to="/" style={{ marginBottom: "30px" }}>
               Regresar al inicio
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

@@ -434,6 +434,61 @@ form {
   }
 }
 
+@media (min-width: 1550px) {
+  .seccion-portada {
+    width: 55%;
+    margin: 0 auto;
+  }
+  .seccion-certificados {
+    width: 55%;
+  }
+  .seccion-contacto {
+    width: 55%;
+  }
+  .seccion-proyectos {
+    width: 55%;
+  }
+  .seccion-sobremi {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1900px) {
+  .seccion-portada {
+    width: 40%;
+  }
+  .seccion-certificados {
+    width: 40%;
+  }
+  .seccion-contacto {
+    width: 40%;
+  }
+  .seccion-proyectos {
+    width: 40%;
+  }
+  .seccion-sobremi {
+    width: 40%;
+  }
+}
+
+@media (min-width: 2357px) {
+  .seccion-portada {
+    width: 35%;
+  }
+  .seccion-certificados {
+    width: 35%;
+  }
+  .seccion-contacto {
+    width: 35%;
+  }
+  .seccion-proyectos {
+    width: 35%;
+  }
+  .seccion-sobremi {
+    width: 35%;
+  }
+}
+
 @media (max-width: 1220px) {
   .columna1-proyectos img {
     width: 330px;

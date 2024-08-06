@@ -5,7 +5,7 @@ import { useTraduccion } from "../context/TraduccionesContext";
 function Portada() {
   const { t, setLenguaje } = useTraduccion();
   return (
-    <section className="seccion-portada">
+    <section id="portada" className="seccion-portada">
       <div className="grid-portada">
         <div className="columna1-portada">
           <img src="/sobremi.avif" alt="" />
@@ -21,7 +21,9 @@ function Portada() {
             >
               {t.cv}
             </button>
-            <button className="btn-outlined">{t.contacto}</button>
+            <a href="mailto:ricardo.arteaga.rdz@gmail.com">
+              <button className="btn-outlined">{t.contacto}</button>
+            </a>
           </div>
           <div className="div-iconos">
             <Link

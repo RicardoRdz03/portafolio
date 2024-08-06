@@ -14,8 +14,11 @@ function Contacto() {
   };
   return (
     <>
-      <section className="seccion-contacto">
-        <h1 className="centrar">
+      <section id="contacto" className="seccion-contacto">
+        <h1
+          style={{ textAlign: "center", paddingLeft: "0" }}
+          className="centrar"
+        >
           <i className="bi bi-at"></i> {t.tcontacto}
         </h1>
         <div className="email-section">

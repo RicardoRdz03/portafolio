@@ -51,7 +51,7 @@ function Navb() {
         <div className="links">
           <a
             style={{ marginRight: "16px", color: "hsla(195, 93%, 48%, 1)" }}
-            href=""
+            href="#portada"
           >
             {t.inicio}
           </a>
@@ -61,7 +61,10 @@ function Navb() {
           <a style={{ marginRight: "16px" }} href="#proyectos">
             {t.proyectos}
           </a>
-          <a href="#certificados">{t.certificados}</a>
+          <a style={{ marginRight: "16px" }} href="#certificados">
+            {t.certificados}
+          </a>
+          <a href="#contacto">{t.tcontacto}</a>
         </div>
         {bandera ? (
           <div onClick={cambiarLenguaje} className="bandera">
@@ -81,16 +84,19 @@ function Navb() {
             ></i>
           </div>
           <div className="div-links">
-            <a style={{ marginBottom: "30px" }} href="">
-              Inicio
+            <a style={{ marginBottom: "30px" }} href="#portada">
+              {t.inicio}
             </a>
-            <a style={{ marginBottom: "30px" }} href="">
-              Habilidades
+            <a style={{ marginBottom: "30px" }} href="#sobre-mi">
+              {t.sobremi}
             </a>
             <a style={{ marginBottom: "30px" }} href="#proyectos">
-              Proyectos
+              {t.proyectos}
             </a>
-            <a href="#certificados">Certificados</a>
+            <a style={{ marginBottom: "30px" }} href="#certificados">
+              {t.certificados}
+            </a>
+            <a href="#contacto">{t.tcontacto}</a>
           </div>
         </div>
       </nav>
