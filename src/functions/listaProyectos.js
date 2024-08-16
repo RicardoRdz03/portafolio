@@ -26,7 +26,7 @@ export function listaProyectos() {
       titulo: `${t.p3t}`,
       img: "/2.png",
       descripcion: `${t.p3d}`,
-      github: "https://github.com/RicardoRdz03/Login-responsivo---Full-Stack",
+      github: "https://github.com/RicardoRdz03/Login-responsivo-FullStack",
       pagina: "https://login-responsive-rick.netlify.app/",
       tec: ["React", "MySQL", "Express.js", "TailwindCSS"],
     },
