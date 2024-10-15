@@ -64,7 +64,6 @@ h3 {
 .columna1-portada img {
   width: 265px;
   border-radius: 7px;
-  animation: upDown 2.2s linear infinite;
 }
 
 .btn-solid {
@@ -299,30 +298,6 @@ nav h2 {
   font-size: 2rem;
 }
 
-.grid-certificado {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.columna1-certificado {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.columna2-certificado {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.columna1-certificado img {
-  width: 400px;
-  border-radius: 9px;
-}
-
 footer {
   background-color: #020d1d;
   padding-top: 3rem;
@@ -406,20 +381,19 @@ form {
 
 .bandera img {
   width: 27px;
-
   margin-right: 8px;
 }
 
-@keyframes upDown {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.grid-certificados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.columna1-certificados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @keyframes typing {
@@ -493,9 +467,6 @@ form {
   .columna1-proyectos img {
     width: 330px;
   }
-  .columna1-certificado img {
-    width: 330px;
-  }
 }
 
 @media (max-width: 1020px) {
@@ -547,12 +518,6 @@ form {
   }
   .seccion-certificados h1 {
     padding-left: 0;
-  }
-  .grid-certificado {
-    grid-template-columns: 1fr;
-  }
-  .columna1-certificado {
-    margin-bottom: 1rem;
   }
   .seccion-contacto h1 {
     padding-left: 0;
@@ -617,9 +582,6 @@ form {
 
 @media (max-width: 445px) {
   .columna1-proyectos img {
-    width: 300px;
-  }
-  .columna1-certificado img {
     width: 300px;
   }
   input {

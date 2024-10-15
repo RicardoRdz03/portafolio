@@ -12,7 +12,7 @@ function Portada() {
         </div>
         <div className="columna2-portada">
           <h2>{t.hola}</h2>
-          <h1 className="typeado">FullStack Developer</h1>
+          <h1 className="typeado">Frontend Developer</h1>
           <div className="div-btn">
             <button
               onClick={() => window.open("/CV_Ricardo.pdf", "_blank")}

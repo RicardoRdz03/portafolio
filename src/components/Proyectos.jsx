@@ -26,9 +26,10 @@ function Proyectos() {
               <div className="columna2-proyectos">
                 <h2>{proyecto.titulo}</h2>
                 <div className="etiquetas">
-                  {proyecto.tec.map((tag) => {
+                  {proyecto.tec.map((tag, index) => {
                     return (
                       <span
+                        key={index}
                         style={{
                           fontSize: "small",
                           marginRight: "5px",
