@@ -40,10 +40,10 @@ function Certificados() {
                   src={certificado.imagen}
                   alt={certificado.titulo}
                 />
-                <h2>{certificado.titulo}</h2>
+                <h2 style={{ textAlign: "center" }}>{certificado.titulo}</h2>
                 <h3>{certificado.instituto}</h3>
                 <p style={{ margin: "0" }}>{certificado.fecha}</p>
-                <Link to={certificado.link}>
+                <Link to={certificado.link} target="_blank">
                   <button className="btn-solid">
                     Ver certificado <i className="bi bi-box-arrow-up-right"></i>
                   </button>
